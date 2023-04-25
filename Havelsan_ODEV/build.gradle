@@ -1,0 +1,24 @@
+plugins {
+    id 'java-library'
+}
+
+group 'org.havelsan'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+compileJava.options.encoding = 'UTF-8'
+
+apply plugin: 'java'
+
+repositories {
+    mavenCentral()
+    gradlePluginPortal()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.4.2'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.4.2'
+}
+
+test {
+    useJUnitPlatform()
+}
